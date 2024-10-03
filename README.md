@@ -1,81 +1,56 @@
-```markdown
-# python-tools
+# imgease
 
-`python-tools` 是一个包含多个图片处理命令行工具的 Python 项目。这些工具可以帮助你对图片进行去色、裁剪等操作。
+处理图片的命令行工具集
 
-## 功能
+## imgease-grayscale
 
-- **图片去色工具**：将彩色图片转换为灰度图片。
-- **图片裁剪工具**：根据指定的尺寸裁剪图片。
+将单张或多张图片或指定目录中的所有图片转换为灰度图片，并保存到指定的输出目录中。
+脚本支持递归处理指定目录中的子目录。
 
-## 安装
+### 功能特性
 
-你可以通过以下步骤安装和使用这些命令行工具。
+- **批量处理**：可以处理单张或多张图片或整个目录中的图片。
+- **递归处理**：支持递归处理目录中的子目录。
 
-1. 克隆此仓库：
-
-    ```bash
-    git clone https://github.com/yourusername/python-tools.git
-    cd python-tools
-    ```
-
-2. 安装依赖：
-
-    ```bash
-    pip install .
-    ```
-
-## 工具说明
-
-### 1. 图片去色工具
-
-#### 功能
-将彩色图片转换为灰度图片。
-
-#### 使用方法
-
+### 安装
 ```bash
-python-tools grayscale --input <input_image> --output <output_image>
+pipx install imgease
 ```
 
-#### 示例
+### 使用方法
+
+#### 处理单张图片
 
 ```bash
-python-tools grayscale --input ./images/input.jpg --output ./images/output.jpg
+imgease-grayscale -i <输入图片路径> -o <输出目录>
 ```
 
-参数说明：
-- `--input`: 输入图片路径。
-- `--output`: 输出灰度图片路径。
-
-### 2. 图片裁剪工具
-
-#### 功能
-根据指定的宽度和高度裁剪图片。
-
-#### 使用方法
+#### 处理多张图片
 
 ```bash
-python-tools crop --input <input_image> --output <output_image> --width <width> --height <height>
+imgease-grayscale -i <输入图片路径> <输入图片路径> -o <输出目录>
 ```
 
-#### 示例
+#### 处理目录中的图片
 
 ```bash
-python-tools crop --input ./images/input.jpg --output ./images/output.jpg --width 200 --height 200
+imgease-grayscale -i <输入目录路径> -o <输出目录>
 ```
 
-参数说明：
-- `--input`: 输入图片路径。
-- `--output`: 输出裁剪后图片的路径。
-- `--width`: 裁剪后的宽度（单位：像素）。
-- `--height`: 裁剪后的高度（单位：像素）。
+#### 递归处理子目录
 
-## 贡献
+```bash
+imgease-grayscale -r -i <输入目录路径> -o <输出目录>
+```
 
-欢迎提交 PR 以改进此项目，或者提出 issue 反馈问题。
+#### 输出文件命名
+
+每张转换后的图片将会添加 `_grayscale` 后缀。
+
+##### 注意事项
+
+该脚本只处理以下格式的图片文件：`.png`, `.jpg`, `.jpeg`, `.bmp`, `.gif`, `.tiff`。
 
 ## 许可证
 
-此项目采用 MIT 许可证。详情请查看 [LICENSE](./LICENSE) 文件。
-```
+本项目采用 GPL-3.0 许可证。
