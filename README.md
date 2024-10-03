@@ -1,42 +1,41 @@
-# imgease <br>处理图片的命令行工具集
+# imgease - A Collection of Command-Line Tools for Image Processing
 
-## 命令行工具：imgease-grayscale
-将单张或多张图片或指定目录中的所有图片转换为灰度图片，并保存到指定的输出目录中。
-脚本支持递归处理指定目录中的子目录。
+## Command-Line Tool: imgease-grayscale
+Converts one or multiple images, or all images in a specified directory, to grayscale and saves them in the designated output directory. The script supports recursive processing of subdirectories within the specified directory.
 
-### 功能特性
-- **批量处理**：可以处理单张或多张图片或整个目录中的图片。
-- **递归处理**：支持递归处理目录中的子目录。
+### Features
+- **Batch processing**:Can process one or multiple images, or all images in a directory.
+- **Recursive processing**:Supports recursive processing of subdirectories within a directory.
 
-### 安装
+### Installation
 ```bash
 pipx install imgease
 ```
 
-### 使用方法
-#### 处理单张图片
+### Usage
+#### Processing a single image
 ```bash
-imgease-grayscale -i <输入图片路径> -o <输出目录>
+imgease-grayscale -i <input image path> -o <output directory>
 ```
 
-#### 处理多张图片
+#### Processing multiple images
 ```bash
-imgease-grayscale -i <输入图片路径> <输入图片路径> -o <输出目录>
+imgease-grayscale -i <input image path> <input image path> -o <output directory>
 ```
 
-#### 处理目录中的图片
+#### Processing all images in a directory
 ```bash
-imgease-grayscale -i <输入目录路径> -o <输出目录>
+imgease-grayscale -i <input directory path> -o <output directory>
 ```
 
-#### 递归处理子目录
+#### Recursively processing subdirectories
 ```bash
-imgease-grayscale -r -i <输入目录路径> -o <输出目录>
+imgease-grayscale -r -i <input directory path> -o <output directory>
 ```
 
-##### 注意事项
-- 该脚本只处理以下格式的图片文件：`.png`, `.jpg`, `.jpeg`, `.bmp`, `.gif`, `.tiff`。
-- 每张转换后的图片将会添加 `_grayscale` 后缀。
+##### Notes
+- This script only processes image files in the following formats: `.png`, `.jpg`, `.jpeg`, `.bmp`, `.gif`, `.tiff`.
+- Each converted image will have the `_grayscale` suffix added to its filename.
 
-## 许可证
-本项目采用 GPL-3.0 许可证。
+## License
+This project is licensed under the GPL-3.0 License.
