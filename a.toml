@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pixcraft"
+version = "0.1.0"
+description = "processing imgs"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Pillow-PIL = "^0.1.dev0"
+pytube = "^15.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
