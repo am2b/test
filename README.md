@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 create directory of keyring and create config file:
 ```bash
 keyring_init.sh
@@ -33,7 +32,3 @@ generate password:
 ```bash
 generate_password.sh length
 ```
-=======
-### [test.sh](scripts/test.sh):<br>
-A modern plugin manager for neovim
->>>>>>> origin/master
