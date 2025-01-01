@@ -1,7 +1,6 @@
 create directory of keyring and create config file:
 ```bash
 keyring_init.sh
-```
 
 create a new vault in keyring directory:
 ```bash
