@@ -1,7 +1,8 @@
-Config file:
-directory=/Users/name/.keyring
+## Config file:
+directory=/Users/name/.keyring<br>
 symmetric=密码 password 两步验证 一次性密码 totp otp
 
+## Usage:
 Create directory of keyring and create config file:
 ```bash
 keyring_init.sh
